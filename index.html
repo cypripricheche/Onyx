@@ -35,128 +35,140 @@
         <p>Qui veut que je sois sur son serveur ?</p>
     </div>
 
-    <div class="commande" id="commande">
-        <div class="commande-header">
-            <h3>Serveur</h3>
-            <!-- <h4>Blabla Coffee Menu</h4> -->
+    <div class="commandes">
+        <div class="commande-selector">
+            <button class="commande-button active" id="serveur-button" onclick="selectButton(this); displayCommande('serveur');">Serveur</button>
+            <button class="commande-button" id="economie-button" onclick="selectButton(this); displayCommande('economie');">Economie</button>
+            <button class="commande-button" id="moderation-button" onclick="selectButton(this); displayCommande('moderation');">Moderation</button>
         </div>
-        <div class="commande-content">
-            <section class="delivery" id="delivery">
-                <div class="group">
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Bienvenue(1).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Bienvenue - Partie 1</h1>
-                            <p>Effectuez la commande <strong>/bienvenue</strong> qui permet d'enclencher, dans le salon prescrit, le message lorsqu'un membre rejoint le serveur.</p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Bienvenue(2).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Bienvenue - Partie 2</h1>
-                            <p>Après avoir exécuté la commande <strong>/bienvenue</strong>, vous obtiendrez ce message dans le salon concerné (il n'est pas possible de le changer dans cette version).</p>
-                        </div>
-                    </div>
-                </div>
-                <hr class="separator">
-                <div class="group">
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/BienvenueRôle(1).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Bienvenue (Rôle) - Partie 1</h1>
-                            <p>Effectuez la commande <strong>/bienvenue_roles</strong>, qui permet d'ajouter ou de retirer des rôles qui seront automatiquement attribués lorsqu'un membre rejoint le serveur.</p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/BienvenueRôle(2).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Bienvenue (Rôle) - Partie 2</h1>
-                            <p>En exécutant la commande <strong>/bienvenue_roles</strong>, vous pouvez également voir la liste des rôles qui seront mis pour les nouveaux membres.</p>
-                        </div>
-                    </div>
-                </div>
-                <hr class="separator">
-                <div class="group">
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Vocal(1).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Vocal - Partie 1</h1>
-                            <p>Effectuez la commande <strong>/vocal</strong> puis choisissez le salon vocal qui permet d'en créé un temporaire lorsqu'on le rejoint.</p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Vocal(2).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Vocal - Partie 2</h1>
-                            <p>Effectuez la commande <strong>/vocal_modif</strong> lorsque vous êtes dans le salon vocal temporaire, et modifiez son nom ainsi que sa capacité d'accueil selon vos préférences.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    </div>
 
-    <div class="commande" id="commande-economie">
-        <div class="commande-header">
-            <h3>Economie</h3>
-            <!-- <h4>Blabla Coffee Menu</h4> -->
+        <div id="commande-serveur" class="commande">
+            <div class="commande-content">
+                <section class="delivery" id="delivery">
+                    <div class="group">
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Bienvenue(1).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Bienvenue - Partie 1</h1>
+                                <p>Effectuez la commande <strong>/bienvenue</strong> qui permet d'enclencher, dans le salon prescrit, le message lorsqu'un membre rejoint le serveur.</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Bienvenue(2).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Bienvenue - Partie 2</h1>
+                                <p>Après avoir exécuté la commande <strong>/bienvenue</strong>, vous obtiendrez ce message dans le salon concerné (il n'est pas possible de le changer dans cette version).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="separator">
+                    <div class="group">
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/BienvenueRôle(1).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Bienvenue (Rôle) - Partie 1</h1>
+                                <p>Effectuez la commande <strong>/bienvenue_roles</strong>, qui permet d'ajouter ou de retirer des rôles qui seront automatiquement attribués lorsqu'un membre rejoint le serveur.</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/BienvenueRôle(2).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Bienvenue (Rôle) - Partie 2</h1>
+                                <p>En exécutant la commande <strong>/bienvenue_roles</strong>, vous pouvez également voir la liste des rôles qui seront mis pour les nouveaux membres.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="separator">
+                    <div class="group">
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Vocal(1).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Vocal - Partie 1</h1>
+                                <p>Effectuez la commande <strong>/vocal</strong> puis choisissez le salon vocal qui permet d'en créé un temporaire lorsqu'on le rejoint.</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Vocal(2).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Vocal - Partie 2</h1>
+                                <p>Effectuez la commande <strong>/vocal_modif</strong> lorsque vous êtes dans le salon vocal temporaire, et modifiez son nom ainsi que sa capacité d'accueil selon vos préférences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-        <div class="commande-content">
-            <section class="delivery" id="delivery">
-                <div class="group">
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Admin_Inventaire(1).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Admin_Inventaire - Partie 1</h1>
-                            <p>Effectuez la commande <strong>/admin_inventaire</strong> qui permet d'ajouter de l'argent à quelqu'un.</p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Admin_Inventaire(2).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Admin_Inventaire - Partie 2</h1>
-                            <p>Effectuez la commande <strong>/admin_inventaire</strong> qui permet de retirer de l'argent à quelqu'un.</p>
-                        </div>
-                    </div>
-                </div>
-                <hr class="separator">
-                <div class="group">
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Inventaire(1).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Inventaire - Partie 1</h1>
-                            <p>Effectuez la commande <strong>/inventaire</strong>, qui permet de voir le nombre d'objet que vous possédez.</p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="delivery-img">
-                            <img src="Commande/Inventaire(2).png" alt="">
-                        </div>
-                        <div class="delivery-text">
-                            <h1>Inventaire - Partie 2</h1>
-                            <p>Si vous exécutez la commande <strong>/inventaire</strong> et vous ne possédez aucun objet, un message sera mis disant que vous n'avez aucun objet.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    </div>
-</body>
 
+        <div id="commande-economie" class="commande">
+            <div class="commande-content">
+                <section class="delivery" id="delivery">
+                    <div class="group">
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Admin_Inventaire(1).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Admin_Inventaire - Partie 1</h1>
+                                <p>Effectuez la commande <strong>/admin_inventaire</strong> qui permet d'ajouter de l'argent à quelqu'un.</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Admin_Inventaire(2).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Admin_Inventaire - Partie 2</h1>
+                                <p>Effectuez la commande <strong>/admin_inventaire</strong> qui permet de retirer de l'argent à quelqu'un.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="separator">
+                    <div class="group">
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Inventaire(1).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Inventaire - Partie 1</h1>
+                                <p>Effectuez la commande <strong>/inventaire</strong>, qui permet de voir le nombre d'objet que vous possédez.</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="delivery-img">
+                                <img src="Commande/Inventaire(2).png" alt="">
+                            </div>
+                            <div class="delivery-text">
+                                <h1>Inventaire - Partie 2</h1>
+                                <p>Si vous exécutez la commande <strong>/inventaire</strong> et vous ne possédez aucun objet, un message sera mis disant que vous n'avez aucun objet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="commande-moderation" class="commande" style="display: none;">
+            <div class="container">
+                <div class="coming-soon">
+                    <h1>Bientôt</h1>
+                    <p>La section de modération est en cours de préparation. Revenez bientôt pour plus d'informations !</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+          
+        <script src="main.js"></script>
+    </body>
 </html>
